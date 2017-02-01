@@ -5,9 +5,9 @@
         "friendsofphp/php-cs-fixer": "^2.0"
     },
     "autoload": {
-        "psr-4":(
+        "psr-4":{
             "": "src/"
-        )
+        }
     },
     "authors": [
         {
