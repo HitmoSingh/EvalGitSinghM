@@ -13,15 +13,6 @@ class StringFormatterTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals("camelcase",$result);
 	}
 
-	public function testConcatStringError(){
-		/*
-			$myClass = new MyClass();
-	        $result = $myClass->IsBlue('blue');
-
-	        $this->assert_False($result);
-        */
-	}
-
 	public function testToCamelCase(){
 
 		$myString = new StringFormatter();
@@ -29,6 +20,7 @@ class StringFormatterTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals("camelCase", $result);
 	}
 
+	/******* Fonction  TestPrefix avec un False *******/
 	public function testPrefixWithFalseParameterSuccess(){
 
         $myString = new StringFormatter();
@@ -36,10 +28,28 @@ class StringFormatterTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("camelcase", $result);
     }
 
-   public function testPrefixWithTrueParameterSuccess(){
+    /******* Fonction  TestPrefix avec un True *******/
+    public function testPrefixWithTrueParameterSuccess(){
 
         $myString = new StringFormatter();
         $result = $myString->prefix("camel", "case", true);
         $this->assertEquals("camelCase", $result);
+    }
+
+
+    /******* Fonction  TestSuffix avec un False *******/
+    public function testSuffixWithFalseParameterSuccess()
+    {
+        $myString = new StringFormatter();
+        $result = $myString->suffix("camel", "case", false);
+        $this->assertEquals("casecamel", $result);
+    }
+
+    /******* Fonction  TestSuffix avec un True *******/
+    public function testSuffixWithTrueParameterSuccess()
+    {
+        $myString = new StringFormatter();
+        $result = $myString->suffix("camel", "case", true);
+        $this->assertEquals("caseCamel", $result);
     }
 }
