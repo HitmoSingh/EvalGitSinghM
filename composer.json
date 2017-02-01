@@ -1,0 +1,13 @@
+{
+    "name": "mohit/exam-git",
+    "require": {
+        "phpunit/phpunit": "^5.7",
+        "friendsofphp/php-cs-fixer": "^2.0"
+    },
+    "authors": [
+        {
+            "name": "HitmoSingh",
+            "email": "mohit93700@gmail.com"
+        }
+    ]
+}
