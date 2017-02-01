@@ -38,16 +38,14 @@ class StringFormatterTest extends \PHPUnit_Framework_TestCase
 
 
     /******* Fonction  TestSuffix avec un False *******/
-    public function testSuffixWithFalseParameterSuccess()
-    {
+    public function testSuffixWithFalseParameterSuccess(){
         $myString = new StringFormatter();
         $result = $myString->suffix("camel", "case", false);
         $this->assertEquals("casecamel", $result);
     }
 
     /******* Fonction  TestSuffix avec un True *******/
-    public function testSuffixWithTrueParameterSuccess()
-    {
+    public function testSuffixWithTrueParameterSuccess(){
         $myString = new StringFormatter();
         $result = $myString->suffix("camel", "case", true);
         $this->assertEquals("caseCamel", $result);
